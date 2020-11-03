@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const { mongoose } = require('./database/db');
-
+require('dotenv').config()
 
 /* cargar los modulos desde el archivo index.js en models*/
 const { Documento } = require('./database/model');
@@ -83,6 +83,7 @@ app.delete('/list/:id', (req , res) => {
   })
 });
 
-app.listen(8000, () => {
+const port = process.env.PORT || 8000;
+app.listen(port, () => {
   console.log("servidor escuchando en 8000");
 });
