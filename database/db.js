@@ -4,7 +4,7 @@ const { Documento } = require('./model/documentos');
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://infofnad:biologia@fnad.ea9vu.mongodb.net/fnad?retryWrites=true&w=majority', {useNewUrlParser: true})
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://xxxx:xxxx@fnad.ea9vu.mongodb.net/fnad?retryWrites=true&w=majority', {useNewUrlParser: true})
   .then(() => { console.log('se conecto a la base de datos');
   }).catch((e) =>{ console.log(" Error al conectarse a la base de datos");
   console.log(e);
